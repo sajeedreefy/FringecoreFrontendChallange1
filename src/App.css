@@ -1,0 +1,79 @@
+/* Reset all default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  z-index: 1;
+  top: -110px; /* Offset to show suggestions above the input field */
+}
+
+.suggestion-item {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+input {
+  width: 500px;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid black;
+  border-bottom: 1px solid gray;
+  outline: none;
+  appearance: none; /* Remove the browser's default styling */
+  text-align: left; /* Align input text in the center */
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none; /* Remove the box shadow on focus */
+}
+
+.output-box {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* Add a wrapper for input and suggestions to control positioning */
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
